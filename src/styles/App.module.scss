@@ -21,7 +21,11 @@ $text-color: #333;
         padding: 1rem 2rem;
         border-radius: 1rem;
       }
-      .shuffle{
+      .options{
+        display: flex;
+        flex-direction: column;
+        gap: 2rem;
+        .shuffle{
           display: flex;
           align-items: center;
           font-size: 2rem;
@@ -38,6 +42,23 @@ $text-color: #333;
               }
           }
       }
+      .runningContainer{
+          display: flex;
+          align-items: center;
+          font-size: 2rem;
+          justify-content: space-evenly;
+
+        .runningTime{
+          border-radius: 1rem;
+          cursor: pointer;
+          &.runningActive{
+            background-color: $primary-color;
+            padding: .5rem 1rem;
+          }
+        }
+      }
+      }
+
 }
 input{
     width: 100%;
@@ -95,7 +116,7 @@ input{
   font-family: Lit;
 
   &:hover {
-    background: darken($primary-color, 10%);
+    background: #FFF
   }
 
   &:disabled {

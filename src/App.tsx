@@ -2,23 +2,12 @@ import { useState } from "react";
 import styles from "./styles/App.module.scss"; // Import SASS styles
 
 const App: React.FC = () => {
-  // const items: string[] = [
-  //   "Item 1",
-  //   "Item 2",
-  //   "Item 3",
-  //   "Item 4",
-  //   "Item 5",
-  //   "Item 6",
-  //   "Item 7",
-  //   "Item 8",
-  //   "Item 9",
-  //   "Item 10",
-  // ];
   const [items, setItems] = useState<string[]>([]);
   const [inputValue, setInputValue] = useState("");
   const [currentItem, setCurrentItem] = useState<string | null>(null);
   const [isAnimating, setIsAnimating] = useState(false);
   const [isShuffle, setIsShuffle] = useState(false);
+  const [runningTime, setRunningTime] = useState(2000);
 
   const getRandomItem = () => {
     if (isAnimating) return; // Prevent multiple clicks during animation
@@ -44,7 +33,7 @@ const App: React.FC = () => {
       const randomIndex = Math.floor(Math.random() * items.length);
       setCurrentItem(items[randomIndex]);
       setIsAnimating(false);
-    }, 2000); // Adjust to control how long the animation runs
+    }, runningTime); // Adjust to control how long the animation runs
   };
   const handleInsertNewItem = (e: React.KeyboardEvent<HTMLInputElement>) => {
     if (e.key === "Enter" && inputValue.trim() !== "") {
@@ -61,22 +50,50 @@ const App: React.FC = () => {
     <div className={styles.container}>
       <div className={styles.headline}>
         <h1 className={styles.title}>Random Item Selector</h1>
-        <div className={styles.shuffle}>
-          <div
-            onClick={() => setIsShuffle(true)}
-            className={`${styles.shuffleButton} ${
-              isShuffle ? styles.shuffleButtonActive : ""
-            }`}
-          >
-            shuffle
+        <div className={styles.options}>
+          <div className={styles.shuffle}>
+            <div
+              onClick={() => setIsShuffle(true)}
+              className={`${styles.shuffleButton} ${
+                isShuffle ? styles.shuffleButtonActive : ""
+              }`}
+            >
+              Shuffle
+            </div>
+            <div
+              onClick={() => setIsShuffle(false)}
+              className={`${styles.shuffleButton} ${
+                isShuffle ? "" : styles.shuffleButtonActive
+              }`}
+            >
+              Not shuffle
+            </div>
           </div>
-          <div
-            onClick={() => setIsShuffle(false)}
-            className={`${styles.shuffleButton} ${
-              isShuffle ? "" : styles.shuffleButtonActive
-            }`}
-          >
-            Not shuffle
+          <div className={styles.runningContainer}>
+            <div
+              onClick={() => setRunningTime(2000)}
+              className={`${styles.runningTime} ${
+                runningTime === 2000 ? styles.runningActive : ""
+              }`}
+            >
+              2s
+            </div>
+            <div
+              onClick={() => setRunningTime(5000)}
+              className={`${styles.runningTime} ${
+                runningTime === 5000 ? styles.runningActive : ""
+              }`}
+            >
+              5s
+            </div>
+            <div
+              onClick={() => setRunningTime(10000)}
+              className={`${styles.runningTime} ${
+                runningTime === 10000 ? styles.runningActive : ""
+              }`}
+            >
+              10s
+            </div>
           </div>
         </div>
       </div>
