@@ -1,6 +1,6 @@
 // Variables
-$primary-color: #4caf50;
-$text-color: #333;
+$primary-color: #E52020;
+$text-color: #fff;
 
 .container {
   text-align: center;
@@ -15,12 +15,38 @@ $text-color: #333;
     justify-content: space-between;
     flex-wrap: wrap;
     gap: 3rem;
-    .title {
-        color: $text-color;
-        background-color: $primary-color;
+    .value{
+      display: flex;
+      flex-direction: column;
+      gap: 2rem;
+      align-items: center;
+      justify-content: center;
+      .title {
+        color: $primary-color;
         padding: 1rem 2rem;
         border-radius: 1rem;
       }
+      .valueContainer{
+        display: flex;
+        align-items: center;
+        gap: 2rem;
+        .valueItem{
+          padding: .5rem 2rem;
+          font-size: 1.5rem;
+          border-radius: .5rem;
+          cursor: pointer;
+          &.valueItemActive{
+            background-color: $primary-color;
+            color: $text-color;
+          }
+          
+        }      
+      }
+      .valueRank{
+        font-size: 1rem;
+        font-weight: bold;
+      }
+    }
       .options{
         display: flex;
         flex-direction: column;
@@ -36,7 +62,7 @@ $text-color: #333;
               cursor: pointer;
               min-width: 150px;
               font-weight: bold;
-              border-bottom: .2rem solid #FFF;
+              border-bottom: .2rem solid $text-color;
               &.shuffleButtonActive{
                 border-bottom: .2rem solid $primary-color;
               }
@@ -54,20 +80,27 @@ $text-color: #333;
           &.runningActive{
             background-color: $primary-color;
             padding: .5rem 1rem;
+            color: $text-color;
           }
         }
       }
       }
 
 }
+.break{
+  width: 100%;
+  height: .2rem;
+  background-color: #5c5c5c;
+}
 input{
     width: 100%;
     padding: 1rem;
     outline: none;
     border: none;
-    border-bottom: .2rem solid #000;
+    border: .2rem solid #000;
     font-family: Lit;
     font-size: 2rem;
+    border-radius: .5rem;
 }
 
 .list {
@@ -97,18 +130,21 @@ input{
     }
     &.active {
       background: $primary-color;
-      color: white;
+      color: $text-color;
       transform: scale(1.1);
     }
   }
 }
 
 .button {
+  position: fixed;
+  bottom: 1rem;
+  right: 1rem;
   background: $primary-color;
-  color: white;
+  color: $text-color;
   padding: 10px 20px;
-  border: none;
-  border-radius: 5px;
+  border: .2rem solid $primary-color;
+  border-radius: .5rem;
   cursor: pointer;
   font-size: 16px;
   transition: 0.3s;
@@ -116,12 +152,15 @@ input{
   font-family: Lit;
 
   &:hover {
-    background: #FFF
+    background: #FFF;
+    color: $primary-color;
   }
 
   &:disabled {
     background: grey;
     cursor: not-allowed;
+    border: none;
+    color: black;
   }
 }
 .selectedItemBackground{
