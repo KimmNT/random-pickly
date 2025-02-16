@@ -10,9 +10,9 @@ $darkGreen: #1b4d3e;
   height: 100vh;
   .content {
     position: relative;
-    width: 90%;
+    width: 98%;
     margin: 0 auto;
-    padding: 5rem 0;
+    padding: 2rem 0;
     .guestList {
       display: flex;
       align-items: center;
@@ -23,7 +23,7 @@ $darkGreen: #1b4d3e;
         position: relative;
         flex-basis: 20rem;
         flex-shrink: 1;
-        // flex-grow: 1;
+        flex-grow: 1;
         background-color: teal;
         padding: 1rem;
         border-radius: 1rem;
