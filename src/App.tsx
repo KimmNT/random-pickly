@@ -9,8 +9,8 @@ const App = () => {
     <Router>
       <Routes>
         <Route path="/" element={<HomePage />} />
-        <Route path="/random-pickly.html" element={<RandomPickly />} />
-        <Route path="/guest-who.html" element={<GuestWho />} />
+        <Route path="/random-pickly" element={<RandomPickly />} />
+        <Route path="/guest-who" element={<GuestWho />} />
         <Route path="*" element={<NotFround />} />
       </Routes>
     </Router>
