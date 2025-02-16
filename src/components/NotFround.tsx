@@ -1,9 +1,7 @@
-import React from 'react'
+// import React from 'react'
 
 const NotFround = () => {
-  return (
-    <div>NotFround</div>
-  )
-}
+  return <div>NotFround</div>;
+};
 
-export default NotFround
+export default NotFround;

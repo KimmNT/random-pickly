@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import { useState } from "react";
 import mainStyle from "../styles/GuestWho.module.scss";
 import guestWhoData from "../json/guestWho.json";
 import { GuessWho } from "../interfaces";
@@ -8,8 +8,8 @@ const GuestWho = () => {
 
   const [guests, setGuests] = useState<GuessWho[]>(guestWhoData);
   const [isSelectedPerson, setIsSelectedPerson] = useState(false);
-  const [selectedPersonValue, setSelectedPersonValue] =
-    useState<GuessWho | null>(null);
+  //   const [selectedPersonValue, setSelectedPersonValue] =
+  //     useState<GuessWho | null>(null);
 
   const updateItemValue = (
     item: GuessWho,
@@ -22,7 +22,7 @@ const GuestWho = () => {
       )
     );
     setIsSelectedPerson(isUpdateSelectedValue);
-    setSelectedPersonValue(item);
+    // setSelectedPersonValue(item);
   };
 
   return (
