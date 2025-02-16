@@ -1,0 +1,87 @@
+$light: #f1e3d3;
+$red: #690b22;
+$avaBackground: #e56464;
+$softOrange: #e07a5f;
+$darkGreen: #1b4d3e;
+
+.container {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  .content {
+    position: relative;
+    width: 90%;
+    margin: 0 auto;
+    padding: 5rem 0;
+    .guestList {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 2rem;
+      flex-wrap: wrap;
+      .guestItem {
+        position: relative;
+        flex-basis: 20rem;
+        flex-shrink: 1;
+        // flex-grow: 1;
+        background-color: teal;
+        padding: 1rem;
+        border-radius: 1rem;
+        overflow: hidden;
+        display: flex;
+        flex-direction: column;
+        gap: 2rem;
+        &.guestItemChose {
+          background-color: $avaBackground;
+        }
+        .guestItemAva {
+          width: 100%;
+          height: 20rem;
+          object-fit: cover;
+        }
+        .guestItemInfo {
+          display: flex;
+          align-items: center;
+          justify-content: space-between;
+          .guestItemName {
+            font-size: 2rem;
+            font-weight: bold;
+            color: $light;
+          }
+          .guestItemControllerButton {
+            cursor: pointer;
+            padding: 0.5rem 1rem;
+            border-radius: 0.5rem;
+            &.guestItemControllerButtonRemove {
+              background: $red;
+              color: $light;
+            }
+            &.guestItemControllerButtonActive {
+              background: $light;
+              color: black;
+            }
+          }
+        }
+        .guestItemRemoved {
+          position: absolute;
+          top: 0;
+          left: 0;
+          width: 100%;
+          height: 100%;
+          background-color: rgba($color: #000000, $alpha: 0.5);
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          .guestItemUndo {
+            background: $darkGreen;
+            color: $light;
+            padding: 0.5rem 1rem;
+            font-size: 1.5rem;
+            cursor: pointer;
+            border-radius: 0.5rem;
+          }
+        }
+      }
+    }
+  }
+}

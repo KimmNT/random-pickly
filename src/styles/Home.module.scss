@@ -1,0 +1,40 @@
+$white: #fff;
+$red: #c14600;
+$yellow: #ff9d23;
+$gray: #e5d0ac;
+$green: #3a7d44;
+$black: #000;
+
+.container {
+  width: 100%;
+  height: 100vh;
+  background-color: $white;
+  .content {
+    width: 90%;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+    .headline {
+      color: $red;
+      font-size: 3rem;
+    }
+    .itemList {
+      display: flex;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 2rem;
+      cursor: pointer;
+      .itemDetail {
+        flex-basis: 1;
+        flex-shrink: 200px;
+        text-decoration: none;
+        background-color: $green;
+        color: $white;
+        padding: 0.5rem 2rem;
+        border-radius: 0.5rem;
+        font-size: 1.5rem;
+      }
+    }
+  }
+}
