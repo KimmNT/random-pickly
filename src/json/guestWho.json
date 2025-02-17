@@ -1,20 +1,218 @@
 [
-  { "id": 1, "name": "Adam", "avatar": "ava01.png", "status": 0 },
-  { "id": 2, "name": "Bella", "avatar": "ava02.png", "status": 0 },
-  { "id": 3, "name": "Charlie", "avatar": "ava03.png", "status": 0 },
-  { "id": 4, "name": "Diana", "avatar": "ava04.png", "status": 0 },
-  { "id": 5, "name": "Ethan", "avatar": "ava05.png", "status": 0 },
-  { "id": 6, "name": "Fiona", "avatar": "ava06.png", "status": 0 },
-  { "id": 7, "name": "George", "avatar": "ava07.png", "status": 0 },
-  { "id": 8, "name": "Hannah", "avatar": "ava08.png", "status": 0 },
-  { "id": 9, "name": "Ian", "avatar": "ava09.png", "status": 0 },
-  { "id": 10, "name": "Jessica", "avatar": "ava10.png", "status": 0 },
-  { "id": 11, "name": "Kevin", "avatar": "ava11.png", "status": 0 },
-  { "id": 12, "name": "Lily", "avatar": "ava12.png", "status": 0 },
-  { "id": 13, "name": "Michael", "avatar": "ava13.png", "status": 0 },
-  { "id": 14, "name": "Nora", "avatar": "ava14.png", "status": 0 },
-  { "id": 15, "name": "Oliver", "avatar": "ava15.png", "status": 0 },
-  { "id": 16, "name": "Paula", "avatar": "ava16.png", "status": 0 },
-  { "id": 17, "name": "Quentin", "avatar": "ava17.png", "status": 0 },
-  { "id": 18, "name": "Rachel", "avatar": "ava18.png", "status": 0 }
+  {
+    "id": 1,
+    "name": "Adam",
+    "avatar": "ava01.png",
+    "status": 0,
+    "type": [
+      { "name": "Grey hair", "type": "Head" },
+      { "name": "Elderly", "type": "Age" },
+      { "name": "Curious", "type": "Expression" },
+      { "name": "Male", "type": "Gender" }
+    ]
+  },
+  {
+    "id": 2,
+    "name": "Bella",
+    "avatar": "ava02.png",
+    "status": 0,
+    "type": [
+      { "name": "Pink hat", "type": "Head" },
+      { "name": "Adult", "type": "Age" },
+      { "name": "Smile", "type": "Expression" },
+      { "name": "Female", "type": "Gender" }
+    ]
+  },
+  {
+    "id": 3,
+    "name": "Charlie",
+    "avatar": "ava03.png",
+    "status": 0,
+    "type": [
+      { "name": "Grey hair", "type": "Head" },
+      { "name": "Adult", "type": "Age" },
+      { "name": "Smile", "type": "Expression" },
+      { "name": "Female", "type": "Gender" }
+    ]
+  },
+  {
+    "id": 4,
+    "name": "Diana",
+    "avatar": "ava04.png",
+    "status": 0,
+    "type": [
+      { "name": "Yellow hat", "type": "Head" },
+      { "name": "Child", "type": "Age" },
+      { "name": "Smile", "type": "Expression" },
+      { "name": "Female", "type": "Gender" }
+    ]
+  },
+  {
+    "id": 5,
+    "name": "Ethan",
+    "avatar": "ava05.png",
+    "status": 0,
+    "type": [
+      { "name": "Purple hat", "type": "Head" },
+      { "name": "Old", "type": "Age" },
+      { "name": "Sad", "type": "Expression" },
+      { "name": "Male", "type": "Gender" }
+    ]
+  },
+  {
+    "id": 6,
+    "name": "Fiona",
+    "avatar": "ava06.png",
+    "status": 0,
+    "type": [
+      { "name": "Bald", "type": "Head" },
+      { "name": "Adult", "type": "Age" },
+      { "name": "Sad", "type": "Expression" },
+      { "name": "Male", "type": "Gender" }
+    ]
+  },
+  {
+    "id": 7,
+    "name": "George",
+    "avatar": "ava07.png",
+    "status": 0,
+    "type": [
+      { "name": "Green hair", "type": "Head" },
+      { "name": "Adult", "type": "Age" },
+      { "name": "Joyful", "type": "Expression" },
+      { "name": "Female", "type": "Gender" }
+    ]
+  },
+  {
+    "id": 8,
+    "name": "Hannah",
+    "avatar": "ava08.png",
+    "status": 0,
+    "type": [
+      { "name": "Yellow hair", "type": "Head" },
+      { "name": "Child", "type": "Age" },
+      { "name": "Joyful", "type": "Expression" },
+      { "name": "Female", "type": "Gender" }
+    ]
+  },
+  {
+    "id": 9,
+    "name": "Ian",
+    "avatar": "ava09.png",
+    "status": 0,
+    "type": [
+      { "name": "Yellow hair", "type": "Head" },
+      { "name": "Adult", "type": "Age" },
+      { "name": "Surprise", "type": "Expression" },
+      { "name": "Male", "type": "Gender" }
+    ]
+  },
+  {
+    "id": 10,
+    "name": "Jessica",
+    "avatar": "ava10.png",
+    "status": 0,
+    "type": [
+      { "name": "Black hair", "type": "Head" },
+      { "name": "Adult", "type": "Age" },
+      { "name": "Curious", "type": "Expression" },
+      { "name": "Male", "type": "Gender" }
+    ]
+  },
+  {
+    "id": 11,
+    "name": "Kevin",
+    "avatar": "ava11.png",
+    "status": 0,
+    "type": [
+      { "name": "Black hair", "type": "Head" },
+      { "name": "Old", "type": "Age" },
+      { "name": "Smile", "type": "Expression" },
+      { "name": "Male", "type": "Gender" }
+    ]
+  },
+  {
+    "id": 12,
+    "name": "Lily",
+    "avatar": "ava12.png",
+    "status": 0,
+    "type": [
+      { "name": "Black hat", "type": "Head" },
+      { "name": "Child", "type": "Age" },
+      { "name": "Smile", "type": "Expression" },
+      { "name": "Female", "type": "Gender" }
+    ]
+  },
+  {
+    "id": 13,
+    "name": "Michael",
+    "avatar": "ava13.png",
+    "status": 0,
+    "type": [
+      { "name": "Grey hair", "type": "Head" },
+      { "name": "Adult", "type": "Age" },
+      { "name": "Smile", "type": "Expression" },
+      { "name": "Female", "type": "Gender" }
+    ]
+  },
+  {
+    "id": 14,
+    "name": "Nora",
+    "avatar": "ava14.png",
+    "status": 0,
+    "type": [
+      { "name": "Purple hair", "type": "Head" },
+      { "name": "Child", "type": "Age" },
+      { "name": "Smile", "type": "Expression" },
+      { "name": "Female", "type": "Gender" }
+    ]
+  },
+  {
+    "id": 15,
+    "name": "Oliver",
+    "avatar": "ava15.png",
+    "status": 0,
+    "type": [
+      { "name": "Bald", "type": "Head" },
+      { "name": "Old", "type": "Age" },
+      { "name": "Smile", "type": "Expression" },
+      { "name": "Male", "type": "Gender" }
+    ]
+  },
+  {
+    "id": 16,
+    "name": "Paula",
+    "avatar": "ava16.png",
+    "status": 0,
+    "type": [
+      { "name": "Red hat", "type": "Head" },
+      { "name": "Elderly", "type": "Age" },
+      { "name": "Smile", "type": "Expression" },
+      { "name": "Male", "type": "Gender" }
+    ]
+  },
+  {
+    "id": 17,
+    "name": "Quentin",
+    "avatar": "ava17.png",
+    "status": 0,
+    "type": [
+      { "name": "Grey hat", "type": "Head" },
+      { "name": "Adult", "type": "Age" },
+      { "name": "Sad", "type": "Expression" },
+      { "name": "Male", "type": "Gender" }
+    ]
+  },
+  {
+    "id": 18,
+    "name": "Rachel",
+    "avatar": "ava18.png",
+    "status": 0,
+    "type": [
+      { "name": "Black hair", "type": "Head" },
+      { "name": "Adult", "type": "Age" },
+      { "name": "Curious", "type": "Expression" },
+      { "name": "Female", "type": "Gender" }
+    ]
+  }
 ]

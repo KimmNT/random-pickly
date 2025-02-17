@@ -10,7 +10,7 @@ const App = () => {
       <Routes>
         <Route path="/" element={<HomePage />} />
         <Route path="/random-pickly" element={<RandomPickly />} />
-        <Route path="/guest-who" element={<GuestWho />} />
+        <Route path="/guess-who" element={<GuestWho />} />
         <Route path="*" element={<NotFround />} />
       </Routes>
     </Router>

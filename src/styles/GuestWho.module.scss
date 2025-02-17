@@ -8,6 +8,46 @@ $darkGreen: #1b4d3e;
   position: relative;
   width: 100%;
   height: 100vh;
+  .filter {
+    position: fixed;
+    bottom: 2rem;
+    right: 5rem;
+    background-color: $light;
+    z-index: 10;
+    width: 4rem;
+    height: 4rem;
+    border-radius: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 0.2rem solid #000;
+    cursor: pointer;
+    .filterIcon {
+      font-size: 2rem;
+    }
+  }
+  .filterContainer {
+    position: fixed;
+    z-index: 99;
+    background-color: rgba($color: #000000, $alpha: 0.5);
+    top: 0;
+    width: 100%;
+    height: 100%;
+    transition: all 0.3s ease-in-out;
+    &.filterContainerVisible {
+      transform: translateX(0%);
+    }
+    &.filterContainerHidden {
+      transform: translateX(100%);
+    }
+    .filterContent {
+      background-color: $light;
+      .selectedItemContainer {
+        font-size: 2rem;
+        font-weight: bold;
+      }
+    }
+  }
   .content {
     position: relative;
     width: 98%;
@@ -21,10 +61,12 @@ $darkGreen: #1b4d3e;
       flex-wrap: wrap;
       .guestItem {
         position: relative;
-        flex-basis: 20rem;
+        flex-basis: 25rem;
         flex-shrink: 1;
         flex-grow: 1;
-        background-color: teal;
+        background-color: $light;
+        box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.1),
+          -4px -4px 10px rgba(255, 255, 255, 0.8);
         padding: 1rem;
         border-radius: 1rem;
         overflow: hidden;
@@ -32,34 +74,70 @@ $darkGreen: #1b4d3e;
         flex-direction: column;
         gap: 2rem;
         &.guestItemChose {
-          background-color: $avaBackground;
-        }
-        .guestItemAva {
-          width: 100%;
-          height: 20rem;
-          object-fit: cover;
+          background-color: $darkGreen;
         }
         .guestItemInfo {
           display: flex;
           align-items: center;
           justify-content: space-between;
-          .guestItemName {
-            font-size: 2rem;
-            font-weight: bold;
-            color: $light;
-          }
-          .guestItemControllerButton {
-            cursor: pointer;
-            padding: 0.5rem 1rem;
+          width: 100%;
+          height: 15rem;
+          .guestItemAva {
+            width: 70%;
+            height: 100%;
+            object-fit: cover;
             border-radius: 0.5rem;
-            &.guestItemControllerButtonRemove {
-              background: $red;
-              color: $light;
+          }
+          .guestItemType {
+            width: 25%;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            align-items: start;
+            justify-content: space-between;
+            .guestItemTypeName {
+              font-size: 1.5rem;
+              font-weight: bold;
             }
-            &.guestItemControllerButtonActive {
-              background: $light;
-              color: black;
+            .guestItemTypeList {
+              display: flex;
+              flex-direction: column;
+              gap: 0.5rem;
+              .guestItemTypeListItem {
+                display: flex;
+                flex-direction: column;
+                background-color: #514e4e;
+                color: $light;
+                padding: 0.2rem 0.5rem;
+                border-radius: 0.2rem;
+                align-items: center;
+                .guestItemTypeListItemValueTitle {
+                  font-size: 1rem;
+                }
+                .guestItemTypeListItemValueName {
+                  font-weight: bold;
+                  font-size: 1rem;
+                  text-align: center;
+                }
+              }
             }
+          }
+        }
+        .guestItemControllerButton {
+          text-align: center;
+          padding: 0.7rem 1rem;
+          border-radius: 1rem;
+          cursor: pointer;
+          font-size: 1.5rem;
+          &.guestItemControllerButtonRemove {
+            background-color: $red;
+            color: $light;
+            font-weight: bold;
+          }
+          &.guestItemControllerButtonActive {
+            background-color: $darkGreen;
+            color: $light;
+            font-weight: bold;
           }
         }
         .guestItemRemoved {
@@ -68,7 +146,7 @@ $darkGreen: #1b4d3e;
           left: 0;
           width: 100%;
           height: 100%;
-          background-color: rgba($color: #000000, $alpha: 0.5);
+          background-color: rgba($color: #000000, $alpha: 0.7);
           display: flex;
           align-items: center;
           justify-content: center;

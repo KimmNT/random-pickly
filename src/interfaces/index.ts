@@ -3,4 +3,10 @@ export interface GuessWho {
   name: string;
   avatar: string;
   status: number;
+  type: Type[];
+}
+
+export interface Type {
+  name: string;
+  type: string;
 }
